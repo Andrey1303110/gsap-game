@@ -30,11 +30,11 @@ function jump(e){
   dinoJump.show=true;
   
   gsap.timeline({ onComplete:function(){dinoJump.show=false} })
-    .fromTo(dinoJump, {spriteOffsetX:0}, {duration:0.5, spriteOffsetX:1250, ease:'steps(5)'})
-    .call(function(){ //console.log(cw-dino.x)
+    .fromTo(dinoJump, {spriteOffsetX:0}, {duration:.75, spriteOffsetX:1250, ease:'steps(5)'})
+    .call(function(){ console.log(cw-dino.x)
     if (cw-dino.x<475&&cw-dino.x>325) {
       coin.show=false;
-      gsap.to(dinoJumpGlow, {duration:0.3, spriteOffsetX:750, ease:'steps(3)'})
+      gsap.to(dinoJumpGlow, {duration:0.5, spriteOffsetX:750, ease:'steps(3)'})
     }
   }, null, 0.25)
   
